@@ -1,0 +1,612 @@
+/* Main App Styles */
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+}
+
+.app-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Tab Navigation */
+.tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.tab-nav button {
+  padding: 10px 16px;
+  border: none;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: black;
+}
+
+.tab-nav button:hover {
+  background: #e0e0e0;
+}
+
+.tab-nav button.active {
+  background: #667eea;
+  color: white;
+}
+
+/* Main Content */
+.app-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Greeting Component */
+.greeting {
+  text-align: center;
+  padding: 40px;
+}
+
+.greeting h1 {
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.greeting p {
+  color: #666;
+}
+
+/* Counter Component */
+.counter {
+  text-align: center;
+}
+
+.counter-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #667eea;
+  margin: 20px 0;
+}
+
+.counter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.counter-controls button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.counter-controls button:first-child,
+.counter-controls button:last-child {
+  background: #667eea;
+  color: white;
+}
+
+.counter-controls button:nth-child(2) {
+  background: #e0e0e0;
+}
+
+.counter-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.counter-controls button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+/* Calculator Component */
+.calculator {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.calc-display {
+  background: #333;
+  color: white;
+  padding: 20px;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 8px 8px 0 0;
+  word-break: break-all;
+}
+
+.calc-error {
+  background: #ff5252;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #333;
+  padding: 2px;
+  border-radius: 0 0 8px 8px;
+}
+
+.calc-buttons button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calc-buttons button:hover {
+  background: #d0d0d0;
+}
+
+.calc-buttons button.function {
+  background: #a0a0a0;
+  color: white;
+}
+
+.calc-buttons button.operator {
+  background: #ff9500;
+  color: white;
+}
+
+.calc-buttons button.operator.active {
+  background: #cc7700;
+}
+
+.calc-buttons button.zero {
+  grid-column: span 2;
+}
+
+/* Todo List Component */
+.todo-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.todo-list form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-list form input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.todo-list form input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.todo-list form button {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.todo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.todo-controls .filters {
+  display: flex;
+  gap: 5px;
+}
+
+.todo-controls button {
+  padding: 8px 16px;
+  border: none;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-controls button.active {
+  background: #667eea;
+  color: white;
+}
+
+.todos {
+  list-style: none;
+  padding: 0;
+}
+
+.todos li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.todos li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todos li span {
+  flex: 1;
+}
+
+.todos li button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #ff5252;
+  color: white;
+}
+
+.todos li .editing {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.todos li .editing input {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #667eea;
+  border-radius: 4px;
+}
+
+.todos li .editing button {
+  background: #667eea;
+}
+
+.todos li .editing button:last-child {
+  background: #999;
+}
+
+/* Form Styles */
+.login-form,
+.registration-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.form-group.checkbox input {
+  width: auto;
+}
+
+.field-error {
+  display: block;
+  color: #ff5252;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.password-strength {
+  font-size: 0.875rem;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.password-strength.weak {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.password-strength.medium {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.password-strength.strong {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.login-form button[type="submit"],
+.registration-form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button[type="submit"]:hover,
+.registration-form button[type="submit"]:hover {
+  background: #5a6fd6;
+}
+
+.login-form button[type="submit"]:disabled,
+.registration-form button[type="submit"]:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* User List Component */
+.user-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.user-list .controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.user-list .controls input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.user-list .controls button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-list th,
+.user-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-list th {
+  background: #f5f5f5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.user-list th:hover {
+  background: #e0e0e0;
+}
+
+.user-list .summary {
+  margin-top: 15px;
+  color: #666;
+}
+
+.user-list.loading,
+.user-list.error {
+  text-align: center;
+  padding: 40px;
+}
+
+.user-list.error button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Shopping Cart Component */
+.shopping-cart {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.shopping-cart .form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.shopping-cart .form-row input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.shopping-cart .form-row button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.shopping-cart .error {
+  color: #ff5252;
+  margin-bottom: 15px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.cart-items li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.cart-items .item-name {
+  flex: 1;
+  font-weight: 600;
+}
+
+.cart-items .quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-items .quantity-controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #667eea;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-items .remove-btn {
+  background: #ff5252;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cart-summary div {
+  margin-bottom: 8px;
+}
+
+.cart-summary .total {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.shopping-cart > button {
+  width: 100%;
+  padding: 12px;
+  background: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
